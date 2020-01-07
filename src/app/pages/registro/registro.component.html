@@ -1,1 +1,293 @@
-<p>registro works!</p>
+
+
+        <div class="app-main__inner" style="margin: 50px;">
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <div class="app-page-title">
+                        <div class="page-title-wrapper">
+                            <div class="page-title-heading">
+                                <div class="page-title-icon">
+                                    <i class="lnr-map text-info">
+                                    </i>
+                                </div>
+                                <div>Registro en línea
+                                    <div class="page-title-subheading">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-title-actions">
+                                
+                                <div class="d-inline-block dropdown">
+                                    Por favor llena los campos 
+                                   
+                                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link">
+                                                    <i class="nav-link-icon lnr-inbox"></i>
+                                                    <span>
+                                                        Inbox
+                                                    </span>
+                                                    <div class="ml-auto badge badge-pill badge-secondary">86</div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link">
+                                                    <i class="nav-link-icon lnr-book"></i>
+                                                    <span>
+                                                        Book
+                                                    </span>
+                                                    <div class="ml-auto badge badge-pill badge-danger">5</div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link">
+                                                    <i class="nav-link-icon lnr-picture"></i>
+                                                    <span>
+                                                        Picture
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a disabled="" class="nav-link disabled">
+                                                    <i class="nav-link-icon lnr-file-empty"></i>
+                                                    <span>
+                                                        File Disabled
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>    </div>
+                    </div>            <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+                        
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-12">
+                                    <div class="main-card mb-3 card">
+                                        <div class="card-body">
+        
+                                            <div id="smartwizard" class="sw-main sw-theme-default">
+                                                <ul class="forms-wizard nav nav-tabs step-anchor">
+                                                    <li class="nav-item active">
+                                                        <a href="#step-1" class="nav-link">
+                                                            <em>1</em><span>Información</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#step-2" class="nav-link">
+                                                            <em>2</em><span>Pago</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#step-3" class="nav-link">
+                                                            <em>3</em><span>Finalizar</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+        
+                                                <div class="form-wizard-content sw-container tab-content" style="min-height: 353px;">
+                                                    <div id="step-1" class="tab-pane step-content" style="display: block;">
+                                                        <div id="accordion" class="accordion-wrapper mb-3">
+                                                            <div class="card">
+                                                                <div id="headingOne" class="card-header">
+                                                                    <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="text-left m-0 p-0 btn btn-link btn-block">
+                                                                        <span class="form-heading">Información de participantes<p>Ingresa la información de los participantes del evento</p></span>
+                                                                    </button>
+                                                                </div>
+                                                                <div data-parent="#accordion" id="collapseOne" aria-labelledby="headingOne" class="collapse show">
+                                                                    <div class="card-body">
+                                                                        <div formArrayName="selling_points">
+                                                                            <div *ngFor="let item of sellingPoints.controls; let pointIndex=index" [formGroupName]="pointIndex">
+                                                                            <div  class="form-row">
+                                                                                
+                                                                                <div class="col-md-6">
+                                                                                    <div class="position-relative form-group"><label for="exampleEmail55">Nombre</label><input formControlName="nombre" name="nombre" id="exampleEmail55" placeholder="Nombre" type="text" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="position-relative form-group"><label for="apellido">Apellido</label><input formControlName="apellido" name="apellido" id="apellido" placeholder="Apellido" type="text" class="form-control"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div  class="form-row">
+                                                                                
+                                                                                <div class="col-md-6">
+                                                                                    <div class="position-relative form-group"><label for="exampleEmail55">Empresa</label><input formControlName="empresa" name="empresa" id="exampleEmail55" placeholder="Empresa" type="text" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="position-relative form-group"><label for="Puesto">Puesto</label><input formControlName="puesto" name="Puesto" id="Puesto" placeholder="Puesto" type="text" class="form-control"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div  class="form-row">
+                                                                                
+                                                                                <div class="col-md-6">
+                                                                                    <div class="position-relative form-group"><label for="exampleEmail55">E-mail</label><input formControlName="email" name="E-mail" id="exampleEmail55" placeholder="E-mail" type="text" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                            <div class="divider"></div>
+                                                                        </div>
+                                                                        <div class="form-row">
+                                                                            <div class="col-md-2">
+                                                                                <button type="button" id="prev-btn"(click)="addSellingPoint(1)" class="btn-shadow float-right btn-wide btn-pill mr-3 btn btn-outline-secondary">Agregar participante</button>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div id="headingOne" class="card-header">
+                                                                <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="text-left m-0 p-0 btn btn-link btn-block">
+                                                                    <span class="form-heading">Asistente ejecutivo<p>En caso de inscribir a terceros por favor llena los siguientes campos</p></span>
+                                                                </button>
+                                                            </div>
+                                                            <div data-parent="#accordion" id="collapseOne" aria-labelledby="headingOne" class="collapse show">
+                                                                <div class="card-body">
+                                                                        <div  class="form-row">
+                                                                            
+                                                                            <div class="col-md-6">
+                                                                                <div class="position-relative form-group"><label for="exampleEmail55">Nombre</label><input formControlName="nombre" name="nombre" id="exampleEmail55" placeholder="Nombre" type="text" class="form-control">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="position-relative form-group"><label for="apellido">Apellido</label><input formControlName="apellido" name="apellido" id="apellido" placeholder="Apellido" type="text" class="form-control"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                        <div  class="form-row">
+                                                                            
+                                                                            <div class="col-md-6">
+                                                                                <div class="position-relative form-group"><label for="exampleEmail55">E-mail</label><input formControlName="email" name="E-mail" id="exampleEmail55" placeholder="E-mail" type="text" class="form-control">
+                                                                                </div>
+                                                                            </div>
+                                                                       
+                                                                    
+                                                                </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        
+                                                        
+                                                    </div>
+                                                    <div id="step-2" class="tab-pane step-content">
+                                                        <div id="accordion" class="accordion-wrapper mb-3">
+                                                            <div class="card">
+                                                                <div id="headingOne" class="card-header">
+                                                                    <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="text-left m-0 p-0 btn btn-link btn-block">
+                                                                        <span class="form-heading">Información de pago<p></p></span>
+                                                                    </button>
+                                                                </div>
+                                                                <div data-parent="#accordion" id="collapseOne" aria-labelledby="headingOne" class="collapse show">
+                                                                    <div class="card-body">
+                                                                        
+                                                                        <div class="position-relative form-group">
+                                                                            <label for="exampleAddress">Address</label><input name="address" id="exampleAddress" placeholder="1234 Main St" type="text" class="form-control"></div>
+                                                                        <div class="position-relative form-group"><label for="exampleAddress2">Address 2</label><input name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor" type="text" class="form-control"></div>
+                                                                        <div class="form-row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="position-relative form-group"><label for="exampleCity">City</label><input name="city" id="exampleCity" type="text" class="form-control"></div>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <div class="position-relative form-group"><label for="exampleState">State</label><input name="state" id="exampleState" type="text" class="form-control"></div>
+                                                                            </div>
+                                                                            <div class="col-md-2">
+                                                                                <div class="position-relative form-group"><label for="exampleZip">Zip</label><input name="zip" id="exampleZip" type="text" class="form-control"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step-3" class="tab-pane step-content">
+                                                        <div class="no-results">
+                                                            <div class="swal2-icon swal2-success swal2-animate-success-icon">
+                                                                <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
+                                                                <span class="swal2-success-line-tip"></span>
+                                                                <span class="swal2-success-line-long"></span>
+                                                                <div class="swal2-success-ring"></div>
+                                                                <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
+                                                                <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
+                                                            </div>
+                                                            <div class="results-subtitle mt-4">Finished!</div>
+                                                            <div class="results-title">You arrived at the last form wizard step!</div>
+                                                            <div class="mt-3 mb-3"></div>
+                                                            <div class="text-center">
+                                                                <button class="btn-shadow btn-wide btn btn-success btn-lg">Finish</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="clearfix">
+                                                
+                                                <button type="button" id="next-btn" class="btn-shadow btn-wide float-right btn-pill btn-hover-shine btn btn-primary">Siguiente</button>
+                                                <!--<button type="button" id="prev-btn" class="btn-shadow float-right btn-wide btn-pill mr-3 btn btn-outline-secondary">Anterior</button>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="main-card mb-3 card">
+                                        <div class="card-header">Información del evento</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="app-wrapper-footer">
+                    <div class="app-footer">
+                        <div class="app-footer__inner">
+                            <!---->
+                            <div class="app-footer-left">
+                                <ul class="header-megamenu nav">
+                                    <li class="nav-item">
+                                        <a data-placement="top" rel="popover-focus" data-offset="300" data-toggle="popover-custom" class="nav-link" data-original-title="" title="">
+                                            Política de privacidad
+                                            
+                                        </a>
+                                        
+                                    </li>
+                                    
+                                    
+                                   
+                                </ul>
+                            </div>
+                            <div class="app-footer-right">
+                                <ul class="header-megamenu nav">
+                                    
+                                    <li class="nav-item">
+                                        <a data-placement="top" rel="popover-focus" data-offset="300" data-toggle="popover-custom" class="nav-link" data-original-title="" title="">
+                                            © 2020 . All rights reserved D y M  • .
+                                            
+                                        </a>
+                                        
+                                    </li>
+                                    
+                                   
+                                </ul>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>    </div>
+           
+        </div>
+         
+        

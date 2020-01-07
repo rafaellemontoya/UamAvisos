@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { SideComponent } from './shared/side/side.component';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,10 @@ import { SideComponent } from './shared/side/side.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
