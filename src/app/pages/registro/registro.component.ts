@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-registro',
@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 })
 export class RegistroComponent implements OnInit {
   
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     
    }
   productForm: FormGroup;
@@ -41,5 +41,8 @@ export class RegistroComponent implements OnInit {
 
   deleteSellingPoint(index) {
     this.sellingPoints.removeAt(index);
+  }
+  submit(form){
+    return this.http.post('https://www.kforum2020.com/backend/insertar_sistema_admin.php', form);
   }
 }

@@ -7,6 +7,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { SideComponent } from './shared/side/side.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     
     ReactiveFormsModule
   ],

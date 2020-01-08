@@ -88,8 +88,10 @@
                                                         </a>
                                                     </li>
                                                 </ul>
+                                                <form [formGroup]="productForm" (submit)="submit(productForm)" >
         
                                                 <div class="form-wizard-content sw-container tab-content" style="min-height: 353px;">
+                                                    
                                                     <div id="step-1" class="tab-pane step-content" style="display: block;">
                                                         <div id="accordion" class="accordion-wrapper mb-3">
                                                             <div class="card">
@@ -229,6 +231,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                </form>
                                             </div>
                                             <div class="divider"></div>
                                             <div class="clearfix">
