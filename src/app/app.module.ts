@@ -7,6 +7,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { SideComponent } from './shared/side/side.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+<<<<<<< HEAD
 import { FooterComponent } from './shared/footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +26,9 @@ import { AgregarDatosFacturaComponent } from './pages/agregar-datos-factura/agre
 import { NuevaCortesiaComponent } from './pages/nueva-cortesia/nueva-cortesia.component';
 
 const routes: Routes = [
+=======
+import { HttpClientModule } from '@angular/common/http';
+>>>>>>> 6b88f23e96132f5c9e13f47876c58f0d7406d92e
 
 ];
 @NgModule({
@@ -55,10 +59,15 @@ const routes: Routes = [
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+<<<<<<< HEAD
     FormsModule,
     ReactiveFormsModule,
     SweetAlert2Module.forRoot(),
     RouterModule.forRoot(routes, { useHash: true })
+=======
+    
+    ReactiveFormsModule
+>>>>>>> 6b88f23e96132f5c9e13f47876c58f0d7406d92e
   ],
   providers: [],
   bootstrap: [AppComponent]
