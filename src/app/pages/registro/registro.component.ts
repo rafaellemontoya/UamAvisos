@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
+import { Participante } from 'src/app/interfaces/participante.interface';
+
+import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
+
 
 
 @Component({
@@ -8,38 +13,49 @@ import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
-  
-  constructor(private fb: FormBuilder) {
-    
+
+  participante: Participante;
+  constructor(private fb: FormBuilder, private http: HttpClient) {
+    this.participante = new Participante();
    }
-  productForm: FormGroup;
+
   ngOnInit() {
-    /* Initiate the form structure */
-    this.productForm = this.fb.group({
-      title: [],
-      selling_points: this.fb.array([this.fb.group({
-        nombre: '',
-        apellido: '',
-        empresa: '',
-        puesto: '',
-        email: ''})])
-    })
-  }
-  get sellingPoints() {
-    
-    return this.productForm.get('selling_points') as FormArray;
-  }
 
+  }
+  crearRegistro(participante: Participante) {
+    (document.getElementById('guardarbtn') as HTMLButtonElement).disabled = true;
+    
+
+    console.log(this.participante);
+    this.http.post('https://www.e-eventos.com/cbm/enp20/backend/insertar_admin.php', participante ).subscribe(
+      (data: any) => {
+        console.log(data);
+        if (data.respuesta === 1) {
+          this.participante = new Participante();
+          Swal.fire({
+            title: 'Apreciable ' + data.nombre,
+            html: 'Has quedado pre-registrado(a) al <b>Evento Nacional de Premiación 2020</b>.',
   
-  addSellingPoint(numero: number) {
-    
-    for (let i=0; i<numero; i++){
-      this.sellingPoints.push(this.fb.group({point:'',apellido: ''}));
-    }
-    
-  }
+    icon: 'success',
+  
+    focusConfirm: false,
+    confirmButtonText:
+      'Aceptar'
+            }).then((result) => {
+              if (result.value) {
+                window.location.href = 'https://www.e-eventos.com/cbm/enp20/index.php#';
 
-  deleteSellingPoint(index) {
-    this.sellingPoints.removeAt(index);
-  }
+              }
+            });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Ocurrió un error al realizar el registro',
+            text: 'Por favor evita usar caracteres especiales e inténtalo nuevamente',
+           
+          });
+        }
+  });
+
+}
 }

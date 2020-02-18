@@ -1,0 +1,85 @@
+
+/*****************************Social Media****************************************/
+
+.linke{
+    display: block;
+    width: 40px;
+    height: 35px;
+    /* background: url(../../../assets/img/in.jpg) no-repeat 0 0; */
+    background: url(../../../assets/img/in.jpg) no-repeat 0 0;
+    }
+    .linke:hover{
+    background: url(../../../assets/img/in_over.jpg) no-repeat 0 0;
+    }
+    
+    .twitter{
+    display: block;
+    width: 40px;
+    height: 35px;
+    background: url(../../../assets/img/twritter.jpg) no-repeat 0 0;
+    }
+    .twitter:hover{
+    background: url(../../../assets/img/twritter_over.jpg) no-repeat 0 0;
+    }
+    
+    .facebook{
+    display: block;
+    width: 40px;
+    height: 35px;
+    background: url(../../../assets/img/facebook.jpg) no-repeat 0 0;
+    }
+    .facebook:hover{
+    background: url(../../../assets/img/facebook_over.jpg) no-repeat 0 0;
+    }
+    
+    .google{
+    display: block;
+    width: 40px;
+    height: 35px;
+    background: url(../../../assets/img/google.jpg) no-repeat 0 0;
+    }
+    .google:hover{
+    background: url(../../../assets/img/google_over.jpg) no-repeat 0 0;
+    }
+    
+    .youtube{
+    display: block;
+    width: 40px;
+    height: 35px;
+    background: url(../../../assets/img/youtube.jpg) no-repeat 0 0;
+    }
+    .youtube:hover{
+    background: url(../../../assets/img/youtube_over.jpg) no-repeat 0 0;
+    }
+    
+    .linkedin{
+    display: block;
+    width: 40px;
+    height: 35px;
+    background: url(../../../assets/img/in.jpg) no-repeat 0 0;
+    }
+    .linkedin:hover{
+    background: url(../../../assets/img/in_over.jpg) no-repeat 0 0;
+    }
+    
+    .instagram{
+    display: block;
+    width: 40px;
+    height: 35px;
+    background: url(../../../assets/img/instagram.jpg) no-repeat 0 0;
+    }
+    .instagram:hover{
+    background: url(../../../assets/img/instagram_over.jpg) no-repeat 0 0;
+    }
+    
+    .rss{
+    display: block;
+    width: 40px;
+    height: 35px;
+    /* background: url(../../../assets/img/rss.jpg) no-repeat 0 0; */
+    }
+    .rss:hover{
+    /* background: url(../../../assets/img/rss_over.jpg) no-repeat 0 0; */
+    }
+    
+    

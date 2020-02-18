@@ -7,10 +7,10 @@
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
                                 <div class="page-title-icon">
-                                    <i class="lnr-map text-info">
+                                    <i class="lnr-pencil text-info">
                                     </i>
                                 </div>
-                                <div>Registro en línea
+                                <div>Pre-registro en línea
                                     <div class="page-title-subheading">
                                     </div>
                                 </div>
@@ -18,7 +18,7 @@
                             <div class="page-title-actions">
                                 
                                 <div class="d-inline-block dropdown">
-                                    Por favor llena los campos 
+                                    <!-- Por favor llena los campos  -->
                                    
                                     <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
                                         <ul class="nav flex-column">
@@ -60,195 +60,132 @@
                                     </div>
                                 </div>
                             </div>    </div>
-                    </div>            <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+                    </div>  
+                              <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
                         
                     </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
-                            <div class="row">
-                                <div class="col-lg-8 col-md-12">
-                                    <div class="main-card mb-3 card">
-                                        <div class="card-body">
+                    <div class="main-card mb-3 card">
+                        <div class="card-body">
+                            <h5 class="card-title">Por favor llena los campos y da click en "Continuar"</h5>
+                            <form #heroForm="ngForm" id="signupForm" class="col-md-10 mx-auto" method="post" action="#" novalidate="novalidate">
+                                <div class="form-group">
+                                    <label for="firstname">Nombre</label>
+                                    <div>
+                                        <!-- <input type="text" class="form-control is-valid" id="firstname" name="firstname" placeholder="First name" aria-invalid="false"> -->
+                                        <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)"class="alert alert-danger"> -->
+                                            <input type="text" class="form-control" id="name"
+    required maxlength="100" minlength="2"
+   [(ngModel)]="participante.nombre" name="nombre" #nombre="ngModel" placeholder="Escribe tu nombre...">
+   <!-- <input  style=" margin-top: 10px;" type="number" class="form-control" required
+                              [(ngModel)]="participante.nombre"
+                              name="numeroEmpleado"
+                              #numeroEmpleado="ngModel" placeholder="numeroEmpleado"> -->
+                                    </div>
+                                </div>
         
-                                            <div id="smartwizard" class="sw-main sw-theme-default">
-                                                <ul class="forms-wizard nav nav-tabs step-anchor">
-                                                    <li class="nav-item active">
-                                                        <a href="#step-1" class="nav-link">
-                                                            <em>1</em><span>Información</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#step-2" class="nav-link">
-                                                            <em>2</em><span>Pago</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#step-3" class="nav-link">
-                                                            <em>3</em><span>Finalizar</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                <div class="form-group">
+                                    <label for="lastname">Apellido</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="name"
+    required maxlength="100" minlength="2"
+    [(ngModel)]="participante.apellido" name="apellido" #apellido="ngModel" placeholder="Escribe tu apellido...">
+                                    </div>
+                                </div>
         
-                                                <div class="form-wizard-content sw-container tab-content" style="min-height: 353px;">
-                                                    <div id="step-1" class="tab-pane step-content" style="display: block;">
-                                                        <div id="accordion" class="accordion-wrapper mb-3">
-                                                            <div class="card">
-                                                                <div id="headingOne" class="card-header">
-                                                                    <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="text-left m-0 p-0 btn btn-link btn-block">
-                                                                        <span class="form-heading">Información de participantes<p>Ingresa la información de los participantes del evento</p></span>
-                                                                    </button>
-                                                                </div>
-                                                                <div data-parent="#accordion" id="collapseOne" aria-labelledby="headingOne" class="collapse show">
-                                                                    <div class="card-body">
-                                                                        <div formArrayName="selling_points">
-                                                                            <div *ngFor="let item of sellingPoints.controls; let pointIndex=index" [formGroupName]="pointIndex">
-                                                                            <div  class="form-row">
-                                                                                
-                                                                                <div class="col-md-6">
-                                                                                    <div class="position-relative form-group"><label for="exampleEmail55">Nombre</label><input formControlName="nombre" name="nombre" id="exampleEmail55" placeholder="Nombre" type="text" class="form-control">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-md-6">
-                                                                                    <div class="position-relative form-group"><label for="apellido">Apellido</label><input formControlName="apellido" name="apellido" id="apellido" placeholder="Apellido" type="text" class="form-control"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div  class="form-row">
-                                                                                
-                                                                                <div class="col-md-6">
-                                                                                    <div class="position-relative form-group"><label for="exampleEmail55">Empresa</label><input formControlName="empresa" name="empresa" id="exampleEmail55" placeholder="Empresa" type="text" class="form-control">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-md-6">
-                                                                                    <div class="position-relative form-group"><label for="Puesto">Puesto</label><input formControlName="puesto" name="Puesto" id="Puesto" placeholder="Puesto" type="text" class="form-control"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div  class="form-row">
-                                                                                
-                                                                                <div class="col-md-6">
-                                                                                    <div class="position-relative form-group"><label for="exampleEmail55">E-mail</label><input formControlName="email" name="E-mail" id="exampleEmail55" placeholder="E-mail" type="text" class="form-control">
-                                                                                    </div>
-                                                                                </div>
-                                                                                
-                                                                            </div>
-                                                                            <div class="divider"></div>
-                                                                        </div>
-                                                                        <div class="form-row">
-                                                                            <div class="col-md-2">
-                                                                                <button type="button" id="prev-btn"(click)="addSellingPoint(1)" class="btn-shadow float-right btn-wide btn-pill mr-3 btn btn-outline-secondary">Agregar participante</button>
-                                                                            </div>
-                                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card">
-                                                            <div id="headingOne" class="card-header">
-                                                                <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="text-left m-0 p-0 btn btn-link btn-block">
-                                                                    <span class="form-heading">Asistente ejecutivo<p>En caso de inscribir a terceros por favor llena los siguientes campos</p></span>
-                                                                </button>
-                                                            </div>
-                                                            <div data-parent="#accordion" id="collapseOne" aria-labelledby="headingOne" class="collapse show">
-                                                                <div class="card-body">
-                                                                        <div  class="form-row">
-                                                                            
-                                                                            <div class="col-md-6">
-                                                                                <div class="position-relative form-group"><label for="exampleEmail55">Nombre</label><input formControlName="nombre" name="nombre" id="exampleEmail55" placeholder="Nombre" type="text" class="form-control">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <div class="position-relative form-group"><label for="apellido">Apellido</label><input formControlName="apellido" name="apellido" id="apellido" placeholder="Apellido" type="text" class="form-control"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        
-                                                                        <div  class="form-row">
-                                                                            
-                                                                            <div class="col-md-6">
-                                                                                <div class="position-relative form-group"><label for="exampleEmail55">E-mail</label><input formControlName="email" name="E-mail" id="exampleEmail55" placeholder="E-mail" type="text" class="form-control">
-                                                                                </div>
-                                                                            </div>
-                                                                       
-                                                                    
-                                                                </div>
-                                                                    
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        
-                                                        
-                                                    </div>
-                                                    <div id="step-2" class="tab-pane step-content">
-                                                        <div id="accordion" class="accordion-wrapper mb-3">
-                                                            <div class="card">
-                                                                <div id="headingOne" class="card-header">
-                                                                    <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="text-left m-0 p-0 btn btn-link btn-block">
-                                                                        <span class="form-heading">Información de pago<p></p></span>
-                                                                    </button>
-                                                                </div>
-                                                                <div data-parent="#accordion" id="collapseOne" aria-labelledby="headingOne" class="collapse show">
-                                                                    <div class="card-body">
-                                                                        
-                                                                        <div class="position-relative form-group">
-                                                                            <label for="exampleAddress">Address</label><input name="address" id="exampleAddress" placeholder="1234 Main St" type="text" class="form-control"></div>
-                                                                        <div class="position-relative form-group"><label for="exampleAddress2">Address 2</label><input name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor" type="text" class="form-control"></div>
-                                                                        <div class="form-row">
-                                                                            <div class="col-md-6">
-                                                                                <div class="position-relative form-group"><label for="exampleCity">City</label><input name="city" id="exampleCity" type="text" class="form-control"></div>
-                                                                            </div>
-                                                                            <div class="col-md-4">
-                                                                                <div class="position-relative form-group"><label for="exampleState">State</label><input name="state" id="exampleState" type="text" class="form-control"></div>
-                                                                            </div>
-                                                                            <div class="col-md-2">
-                                                                                <div class="position-relative form-group"><label for="exampleZip">Zip</label><input name="zip" id="exampleZip" type="text" class="form-control"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div id="step-3" class="tab-pane step-content">
-                                                        <div class="no-results">
-                                                            <div class="swal2-icon swal2-success swal2-animate-success-icon">
-                                                                <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
-                                                                <span class="swal2-success-line-tip"></span>
-                                                                <span class="swal2-success-line-long"></span>
-                                                                <div class="swal2-success-ring"></div>
-                                                                <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
-                                                                <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
-                                                            </div>
-                                                            <div class="results-subtitle mt-4">Finished!</div>
-                                                            <div class="results-title">You arrived at the last form wizard step!</div>
-                                                            <div class="mt-3 mb-3"></div>
-                                                            <div class="text-center">
-                                                                <button class="btn-shadow btn-wide btn btn-success btn-lg">Finish</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="clearfix">
-                                                
-                                                <button type="button" id="next-btn" class="btn-shadow btn-wide float-right btn-pill btn-hover-shine btn btn-primary">Siguiente</button>
-                                                <!--<button type="button" id="prev-btn" class="btn-shadow float-right btn-wide btn-pill mr-3 btn btn-outline-secondary">Anterior</button>-->
-                                            </div>
+                                <div class="form-group">
+                                    <label for="username">Puesto</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="name"
+    required maxlength="100" minlength="2"
+    ngModel name="puesto"
+    [(ngModel)]="participante.puesto" #puesto="ngModel" placeholder="Escribe tu puesto...">
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <div>
+                                        <!-- <input type="text" class="form-control is-valid" id="email" name="email" placeholder="Email" aria-describedby="email-error" aria-invalid="false"><em id="email-error" class="error invalid-feedback" style="display: none;"></em> -->
+                                        <input type="text" class="form-control" id="email"
+    required maxlength="100" minlength="3"
+    [(ngModel)]="participante.email" name="email" #email="ngModel" placeholder="Escribe tu email...">
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="password">Oficinas Coldwell Banker</label>
+                                    <input type="text" class="form-control" id="name"
+    required maxlength="100" minlength="2"
+    [(ngModel)]="participante.oficinas" name="oficina" #oficinas="ngModel" placeholder="Escribe tu Oficina Coldwell Banker...">
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="confirm_password">Estado</label>
+                                    <div>
+                                        <select class="mb-2 form-control" [(ngModel)]="participante.estado" name="estado" #estado="ngModel">
+                                                <option value="Aguascalientes">Aguascalientes</option>
+                                                <option value="Baja California">Baja California</option>
+                                                <option value="Baja California Sur">Baja California Sur</option>
+                                                <option value="Campeche">Campeche</option>
+                                                <option value="Chiapas">Chiapas</option>
+                                                <option value="Chihuahua">Chihuahua</option>
+                                                <option value="Coahuila">Coahuila</option>
+                                                <option value="Colima">Colima</option>
+                                                <option value="Ciudad de México">Ciudad de México</option>
+                                                <option value="Durango">Durango</option>
+                                                <option value="Estado de México">Estado de México</option>
+                                                <option value="Guanajuato">Guanajuato</option>
+                                                <option value="Guerrero">Guerrero</option>
+                                                <option value="Hidalgo">Hidalgo</option>
+                                                <option value="Jalisco">Jalisco</option>
+                                                <option value="Michoacán">Michoacán</option>
+                                                <option value="Morelos">Morelos</option>
+                                                <option value="Nayarit">Nayarit</option>
+                                                <option value="Nuevo León">Nuevo León</option>
+                                                <option value="Oaxaca">Oaxaca</option>
+                                                <option value="Puebla">Puebla</option>
+                                                <option value="Querétaro">Querétaro</option>
+                                                <option value="Quintana Roo">Quintana Roo</option>
+                                                <option value="San Luis Potosí">San Luis Potosí</option>
+                                                <option value="Sinaloa">Sinaloa</option>
+                                                <option value="Sonora">Sonora</option>
+                                                <option value="Tabasco">Tabasco</option>
+                                                <option value="Tamaulipas">Tamaulipas</option>
+                                                <option value="Tlaxcala">Tlaxcala</option>
+                                                <option value="Veracruz">Veracruz</option>
+                                                <option value="Yucatán">Yucatán</option>
+                                                <option value="Zacatecas">Zacatecas</option>
+                                          
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Teléfono</label>
+                                    <input type="text" class="form-control" id="name"
+    required maxlength="10" minlength="10"
+    [(ngModel)]="participante.telefono" name="telefono" #telefono="ngModel" placeholder="Escribe tu teléfono a 10 dígitos...">
+                                </div>
+        
+                                <!-- <div class="form-group">
+                                    <div>
+                                        <div class="form-check">
+                                            <input type="checkbox"  id="agree" name="agree" value="agree" class="form-check-input is-invalid" aria-describedby="agree-error" 
+                                            ngModel name="politica" #participante.politica="ngModel" placeholder="Escribe tu teléfono a 10 dígitos...">
+                                            <label class="form-check-label">Por favor acepta nuestra política de privacidad</label><em id="agree-error" class="error invalid-feedback">para continuar</em>
                                         </div>
                                     </div>
+                                </div> -->
+        
+                                <div class="form-group">
+                                    <button type="submit"(click)="crearRegistro(participante)"[disabled]="heroForm.invalid" class="btn btn-primary" name="signup" id="guardarbtn"  value="Sign up">Continuar</button>
+                                    
                                 </div>
-                                <div class="col-md-12 col-lg-4">
-                                    <div class="main-card mb-3 card">
-                                        <div class="card-header">Información del evento</div>
-                                        
-                                    </div>
+                                <div class="form-group">
+                                    <a  href="https://www.e-eventos.com/cbm/enp20/index.php#" class="btn btn-primary" >Salir</a>
+                                    
                                 </div>
-                            </div>
+                            </form>
                         </div>
-                        
-                        
                     </div>
                 </div>
                 <div class="app-wrapper-footer">
@@ -259,7 +196,8 @@
                                 <ul class="header-megamenu nav">
                                     <li class="nav-item">
                                         <a data-placement="top" rel="popover-focus" data-offset="300" data-toggle="popover-custom" class="nav-link" data-original-title="" title="">
-                                            Política de privacidad
+                                            ©2020 ColdwellBanker® Real Estate Corporation.<br> Coldwell Banker®
+  es marca registrada de Coldwell Banker Real Estate Corporation.®
                                             
                                         </a>
                                         
@@ -273,20 +211,40 @@
                                 <ul class="header-megamenu nav">
                                     
                                     <li class="nav-item">
-                                        <a data-placement="top" rel="popover-focus" data-offset="300" data-toggle="popover-custom" class="nav-link" data-original-title="" title="">
-                                            © 2020 . All rights reserved D y M  • .
+                                        <a data-placement="top"href="https://www.coldwellbanker.com.mx/aviso_privacidad?of=" target="_blank" rel="popover-focus" data-offset="300" data-toggle="popover-custom" class="nav-link" data-original-title="" title="">
+                                           Aviso de privacidad
                                             
                                         </a>
                                         
                                     </li>
-                                    
+                                    <li class="nav-item">
+                                            <a href="https://www.facebook.com/coldwellmexico/" target="_blank"  class="facebook "></a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <td width="40"><a href="https://www.instagram.com/coldwellmexico/?hl=en" target="_blank"  class="instagram"></a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="https://twitter.com/coldwellmexico" target="_blank"  class="twitter"></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="https://www.youtube.com/channel/UCUYaSjDTmaKic3z50JJtxTA" target="_blank"  class="youtube"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.linkedin.com/company/coldwellbankermexico" target="_blank"  class="linkedin"></a>
+                    </li>
+
                                    
                                 </ul>
                             </div>
                         
                         </div>
                     </div>
-                </div>    </div>
+                </div>
+            
+            </div>
            
         </div>
          

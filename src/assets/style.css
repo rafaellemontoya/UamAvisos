@@ -6095,7 +6095,7 @@ input[type="button"].btn-block {
   padding: .75rem 1.25rem;
   margin-bottom: 0;
   color: inherit;
-  background-color: #fff;
+  background-color: #005AA7;
   border-bottom: 1px solid rgba(26, 54, 126, 0.125)
 }
 
@@ -11342,8 +11342,8 @@ button,
 }
 
 .app-header__logo .logo-src {
-  height: 23px;
-  width: 97px;
+  height: 40px;
+  width: 200px;
   background: url(assets/images/logo-inverse.png)
 }
 
@@ -16182,14 +16182,14 @@ Copyright (c) 2015 Daniel Eden
 
 .btn-primary {
   color: #fff;
-  background-color: #3f6ad8;
-  border-color: #3f6ad8
+  background-color: #004890;
+  border-color: #004890;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #2955c8;
-  border-color: #2651be
+  background-color: #3ac47d;
+  border-color: #3ac47d
 }
 
 .btn-primary:focus,
@@ -18069,7 +18069,7 @@ a.avatar-icon-wrapper:hover .avatar-icon {
 .card-header,
 .card-title {
   text-transform: uppercase;
-  color: rgba(13, 27, 62, 0.7);
+  color: #fff;
   font-weight: bold;
   font-size: .88rem
 }
@@ -21347,8 +21347,8 @@ legend {
 }
 
 .app-logo {
-  height: 23px;
-  width: 97px;
+  height: 40px;
+  width: 200px;
   background: url(assets/images/logo-inverse.png)
 }
 

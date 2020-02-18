@@ -1,0 +1,197 @@
+<div class="app-main">
+    <div class="app-sidebar sidebar-shadow">
+        <div class="app-header__logo">
+            <div class="logo-src"></div>
+            <div class="header__pane ml-auto">
+                <div>
+                    <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="app-header__mobile-menu">
+            <div>
+                <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="app-header__menu">
+            <span>
+                <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                    <span class="btn-icon-wrapper">
+                        <i class="fa fa-ellipsis-v fa-w-6"></i>
+                    </span>
+                </button>
+            </span>
+        </div>    
+        <div class="scrollbar-sidebar ps ps--active-y">
+            <div class="app-sidebar__inner">
+                <ul class="vertical-nav-menu metismenu">
+                    <li class="app-sidebar__heading">Menu</li>
+                    <li>
+                        <a [routerLink]="['/ver-registro']">
+                            <i class="metismenu-icon pe-7s-rocket"></i>
+                            Registro
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a [routerLink]="['/codigos-descuento']">
+                            <i class="metismenu-icon pe-7s-rocket"></i>
+                            Códigos descuento
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="https://www.e-eventos.com/dymabogados/backend/obtener_excel_registroDyM.php">
+                            <i class="metismenu-icon pe-7s-rocket"></i>
+                            Descargar Excel
+                        </a>
+                        
+                    </li>
+
+                    <li>
+                        <a style="cursor: pointer;" (click)="logout()">
+                            <i class="metismenu-icon pe-7s-rocket"></i>
+                            Cerrar sesión
+                        </a>
+                        
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 661px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 462px;"></div></div></div>
+    </div> 
+       <div class="app-main__outer">
+        <div class="app-main__inner">
+            <div class="app-page-title">
+                <div class="page-title-wrapper">
+                    <div class="page-title-heading">
+                        <!-- <div class="page-title-icon">
+                            <i class="pe-7s-medal icon-gradient bg-tempting-azure">
+                            </i>
+                        </div>
+                        <div>Registro
+                            <div class="page-title-subheading">
+                            </div>
+                        </div> -->
+                        <img src="https://www.e-eventos.com/dlvmr/2020/reforma_laboral/admin/assets/banner.jpg" style="    max-width: 100%; 
+                        width: auto\9;
+                        height: auto;
+                        vertical-align: middle;
+                        border: 0;
+                        -ms-interpolation-mode: bicubic;">
+                    </div>
+                        </div>
+            </div>           
+             
+            <div class="tab-content">
+                <div class="tab-pane tabs-animation fade active show" id="tab-content-0" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title"style="color:#3f6ad8">Fecha de envío</h5>
+                                    <input type="text" class="form-control" data-toggle="datepicker">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Button Trigger</h5>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" data-toggle="datepicker-button">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-primary datepicker-trigger-btn" type="button">Open Datepicker</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Icon Trigger</h5>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend datepicker-trigger">
+                                            <div class="input-group-text">
+                                                <i class="fa fa-calendar-alt"></i>
+                                            </div>
+                                        </div>
+                                        <input type="text" class="form-control" data-toggle="datepicker-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Start View Year</h5>
+                                    <input type="text" class="form-control" data-toggle="datepicker-year">
+                                </div>
+                            </div>
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Start View Month</h5>
+                                    <input type="text" class="form-control" data-toggle="datepicker-month">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane tabs-animation fade" id="tab-content-1" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Basic</h5>
+                                    <input type="text" class="form-control" name="daterange" value="01/01/2018 - 01/15/2018">
+                                </div>
+                            </div>
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Single Datepicker</h5>
+                                    <input type="text" class="form-control" name="birthday" value="10/24/1984">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">With Times</h5>
+                                    <input type="text" class="form-control" name="datetimes">
+                                </div>
+                            </div>
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Predefined Date Ranges</h5>
+                                    <button class="btn btn-primary" id="reportrange">
+                                        <i class="fa fa-calendar pr-1"></i>
+                                        <span>January 13, 2020 - February 11, 2020</span>
+                                        <i class="fa pl-1 fa-caret-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-card mb-3 card">
+                        <div class="card-body">
+                            <h5 class="card-title">Complex Example</h5>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-calendar-alt"></i>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="daterange-centered">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

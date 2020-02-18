@@ -1,0 +1,487 @@
+
+
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>    
+                <div class="scrollbar-sidebar ps ps--active-y">
+                    <div class="app-sidebar__inner">
+                        <ul class="vertical-nav-menu metismenu">
+                            <li class="app-sidebar__heading">Menu</li>
+                            <li>
+                                <a [routerLink]="['/ver-registro']">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    Registro
+                                </a>
+                                
+                            </li>
+                            <li>
+                                <a [routerLink]="['/codigos-descuento']">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    Códigos descuento
+                                </a>
+                                
+                            </li>
+                            <li>
+                                <a href="https://www.e-eventos.com/dymabogados/backend/obtener_excel_registroDyM.php">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    Descargar Excel
+                                </a>
+                                
+                            </li>
+        
+                            
+                            
+                        </ul>
+                    </div>
+                <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 661px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 462px;"></div></div></div>
+            </div> 
+               <div class="app-main__outer">
+                <div class="app-main__inner">
+                    
+        
+                <div class="app-main__inner" >
+                    <div class="app-main__outer">
+                        <div class="app-main__inner">
+                            <div class="app-page-title">
+                                <div class="page-title-wrapper">
+                                    <div class="page-title-heading">
+                                        <div class="page-title-icon">
+                                            <i class="pe-7s-info
+
+                                            text-info">
+                                            </i>
+                                        </div>
+                                        <div>Ver participante
+                                            <div class="page-title-subheading">
+                                                <a [routerLink]="['/ver-registro']" class="" >Atrás</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="page-title-actions">
+                                        
+                                        <div class="d-inline-block dropdown">
+                                            <!-- Por favor llena los campos  -->
+                                           
+                                            <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link">
+                                                            <i class="nav-link-icon lnr-inbox"></i>
+                                                            <span>
+                                                                Inbox
+                                                            </span>
+                                                            <div class="ml-auto badge badge-pill badge-secondary">86</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link">
+                                                            <i class="nav-link-icon lnr-book"></i>
+                                                            <span>
+                                                                Book
+                                                            </span>
+                                                            <div class="ml-auto badge badge-pill badge-danger">5</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link">
+                                                            <i class="nav-link-icon lnr-picture"></i>
+                                                            <span>
+                                                                Picture
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a disabled="" class="nav-link disabled">
+                                                            <i class="nav-link-icon lnr-file-empty"></i>
+                                                            <span>
+                                                                File Disabled
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>    </div>
+                            </div>  
+                                      <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+                                
+                            </ul>
+                            <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-header"><i class="header-icon pe-7s-id icon-gradient bg-white"> </i>Datos Generales</div>
+                                            <div class="card-body">
+                                                <p>Nombre: <b>{{participante.nombre}} {{participante.apellido}}</b></p>
+                                                <p>Empresa: <b>{{participante.empresa}}</b></p>
+                                                <p>Puesto: <b>{{participante.puesto}}</b></p>
+                                                <p>Email: <b>{{participante.email}}</b></p>
+                                                <p>Teléfono: <b>{{participante.telefono}}</b></p>
+                                                
+                                            
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-header"><i class="header-icon pe-7s-news-paper icon-gradient bg-white"> </i>Datos de facturación</div>
+                                            <div class="card-body">
+                                                <p>RFC: <b>{{participante.nombreInscribe}} {{participante.rfc}}</b></p>
+                                                <p>Razón social: <b>{{participante.razonSocial}}</b></p>
+                                                <p>Calle: <b>{{participante.calle}}</b></p>
+                                                <p>Número exterior: <b>{{participante.numeroExterior}}</b></p>
+                                                <p>Número interior: <b>{{participante.numeroInterior}}</b></p>
+                                                <p>Municipio: <b>{{participante.municipio}}</b></p>
+                                                <p>Colonia: <b>{{participante.colonia}}</b></p>
+                                                <p>C.P.: <b>{{participante.cp}}</b></p>
+                                                <p>Estado: <b>{{participante.estado}}</b></p>
+                                                <p>Email envío: <b>{{participante.email}}</b></p>
+                                                <p>Uso CFDI : <b>{{participante.usoCFDI}}</b></p>
+                                                <p>Forma de pago : <b>{{participante.formaPagoFiscal}}</b></p>
+                                                <p>Código decuento: <b>{{participante.codigoDescuento}}</b></p>
+                                                
+                                            
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-header"><i class="header-icon pe-7s-note2 icon-gradient bg-white"> </i>Datos de inscripción</div>
+                                            <div class="card-body">
+                                                <p>Id registro: <b>{{participante.id}} </b></p>
+                                                <p>Fecha registro: <b>{{participante.fechaRegistro}}</b></p>
+                                                <p>Id grupo: <b> {{ getTextoGrupo(participante.idGrupo)}}</b></p>
+                                                <p>Forma de pago: <b> {{ getFormaPago( participante.formaPago)}}</b></p>
+                                                <p>{{textoReferencia}}<b> {{participante.referencia}}</b></p>
+
+                                                
+                                            
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-header"><i class="header-icon pe-7s-users icon-gradient bg-white"> </i>Datos del asistente</div>
+                                            <div class="card-body">
+                                                <p>Nombre: <b>{{participante.nombreInscribe}} {{participante.apellidoInscribe}}</b></p>
+                                                <p>Email: <b>{{participante.correoInscribe}}</b></p>
+                                                <p>Teléfono: <b>{{participante.telefonoInscribe}}</b></p>
+                                                
+                                            
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-header"><i class="header-icon pe-7s-cash icon-gradient bg-white"></i>Cuota</div>
+                                            <div class="card-body">
+                                                <p>Total pagado: <b>{{participante.total | currency}} </b></p>
+                                                
+                                            
+                                            </div>
+                                            
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Id participante: {{participante.id}}<br>Fecha de registro: {{participante.fechaRegistro}}</h5>
+                                    <form #heroForm="ngForm" id="signupForm" class="col-md-10 mx-auto" method="post" action="#" novalidate="novalidate">
+                                        <div class="form-group">
+                                            <h5 style="color:#005AA7"><b>Datos generales</b></h5>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstname">Nombre</label>
+                                            <div>
+                                                    <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+           [(ngModel)]="participante.nombre" name="nombre" #nombre="ngModel" placeholder="Escribe tu nombre..." disabled>
+                                            </div>
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="lastname">Apellido</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.apellido" name="apelido" #apellido="ngModel" placeholder="Escribe tu apellido..."disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Empresa</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            ngModel name="empresa"
+            [(ngModel)]="participante.empresa" #empresa="ngModel" placeholder="Escribe tu puesto..."disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Puesto</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            ngModel name="puesto"
+            [(ngModel)]="participante.puesto" #puesto="ngModel" placeholder="Escribe tu puesto..."disabled>
+                                            </div>
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <div>
+                                                
+                                                <input type="text" class="form-control" id="email"
+            required maxlength="100" minlength="3"
+            [(ngModel)]="participante.email" name="email" #email="ngModel" placeholder="Escribe tu email..."disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Teléfono</label>
+                                            <div>
+                                               
+                                                <input type="text" class="form-control" id="email"
+            required maxlength="100" minlength="3"
+            [(ngModel)]="participante.telefono" name="telefono" #telefono="ngModel" placeholder="Escribe tu email..."disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <h5 style="color:#005AA7"><b>Datos del asistente</b></h5>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Nombre persona que inscribe</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.nombreInscribe" name="apllido" #nombreInscribe="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Apellido persona que inscribe</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.apellidoInscribe" name="apellidoInscribe" #apellidoInscribe="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Correo persona que inscribe</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.correoInscribe" name="correoInscribe" #correoInscribe="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Teléfono persona que inscribe</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.telefonoInscribe" name="telefonoInscribe" #telefonoInscribe="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <h5 style="color:#005AA7"><b>Datos de facturación</b></h5>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">RFC</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.rfc" name="rfc" #rfc="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Razón social</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.razonSocial" name="razonSocial" #razonSocial="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Calle </label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.calle" name="calle" #calle="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Número exterior </label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.numeroExterior" name="numeroExterior" #numeroExterior="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-group">
+                                            <label for="lastname">Número interior </label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.numeroInterior" name="numeroInterior" #numeroInterior="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Municipio </label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.municipio" name="municipio" #municipio="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Colonia </label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.colonia" name="colonia" #colonia="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Código postal </label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.cp" name="cp" #cp="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-group">
+                                            <label for="lastname">Estado</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.estado" name="estado" #estado="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-group">
+                                            <label for="lastname">Email envío</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.correoFactura" name="correoFactura" #correoFactura="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Uso CFDI</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.usoCFDI" name="usoCFDI" #usoCFDI="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="lastname">Forma de pago </label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.formaPagoFiscal" name="formaPagoFiscal" #formaPagoFiscal="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-group">
+                                            <label for="lastname">Código promocional</label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.codigoDescuento" name="codigoDescuento" #codigoDescuento="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <h5 style="color:#005AA7"><b>Cuota </b></h5>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastname">Total pagado </label>
+                                            <div>
+                                                <input type="text" class="form-control" id="name"
+            required maxlength="100" minlength="2"
+            [(ngModel)]="participante.total" name="apellido" #total="ngModel" placeholder=""disabled>
+                                            </div>
+                                        </div>
+        
+        
+        
+        
+        
+                                        
+                
+                                       
+                
+                                        <div class="form-group">
+                                           
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <a [routerLink]="['/ver-registro']" class="btn btn-primary" >Atrás</a>
+                                            
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="app-wrapper-footer">
+                            <div class="app-footer">
+                                <div class="app-footer__inner">
+                                    <!---->
+                                    <div class="app-footer-left">
+                                        <ul class="header-megamenu nav">
+                                            
+                                            
+                                            
+                                           
+                                        </ul>
+                                    </div>
+                                    <div class="app-footer-right">
+                                        <ul class="header-megamenu nav">
+                                            
+                                            
+        
+                                           
+                                        </ul>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                   
+                </div>
+                 
+                
+        
