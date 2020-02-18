@@ -35,8 +35,8 @@ export class VerRegistroComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
-    // this.isLoggedIn();
-    this.getInfo();
+    this.isLoggedIn();
+    // this.getInfo();
     }
 
   getInfo() {
@@ -71,26 +71,7 @@ export class VerRegistroComponent implements OnInit {
     this.nombreEliminar = nombre;
 
   }
-  eliminar() {
-    this.preguntaEliminar = false;
-    const asistente = new Participante();
-    // asistente.id = this.idEliminar.valueOf;
-    this.http.post('', asistente).subscribe((data) => {
-      console.log(data);
-      if (data['respuesta'] === 1) {
-        this.getInfo();
-        this.estadoEliminado = true;
-
-        window.scroll(0, 0);
-
-      }
-      // tslint:disable-next-line:no-string-literal
-      // this.items = data;
-      this.usersJson = Array.of(data);
-      console.log (this.usersJson);
-    });
-
-  }
+ 
 
   rechazar(id) {
     const participante = new Participante();
@@ -347,6 +328,40 @@ export class VerRegistroComponent implements OnInit {
     }else if(formaPago ==='2'){
       return 'Transferencia';
     }
+  }
+
+  eliminar(id) {
+    const participante = new Participante();
+    participante.id = id;
+    console.log(participante);
+    Swal.fire({
+      title: 'Estás seguro de querer eliminar?',
+      text: 'Esta acción no se puede deshacer',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Aceptar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.value) {
+        this.http.post('https://www.e-eventos.com/dymabogados/backend/eliminar_participante.php', participante)
+          .subscribe((data: any) => {
+            console.log(data);
+            if (data.respuesta === 1) {
+              Swal.fire(
+
+                'Registro eliminado con éxito!',
+                '',
+                'success'
+              );
+              this.getInfo();
+            }
+          });
+
+      }
+    });
+
   }
 
 }

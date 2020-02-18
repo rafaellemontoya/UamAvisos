@@ -42,6 +42,13 @@
                         
                     </li>
                     <li>
+                        <a [routerLink]="['/nueva-cortesia']">
+                            <i class="metismenu-icon pe-7s-rocket"></i>
+                            Nueva cortesía
+                        </a>
+                        
+                    </li>
+                    <li>
                         <a [routerLink]="['/codigos-descuento']">
                             <i class="metismenu-icon pe-7s-rocket"></i>
                             Códigos descuento
@@ -194,7 +201,7 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6">
-                                                <button class="btn-icon-vertical btn-transition btn btn-outline-primary"><i class="pe-7s-gift btn-icon-wrapper"> </i>Agregar datos factura</button>
+                                                <button (click)="eliminar(item.id_registro)" class="btn-icon-vertical btn-transition btn btn-outline-primary"><i class="pe-7s-trash btn-icon-wrapper"> </i>Eliminar</button>
                                             </div>
                                             <div class="col-sm-6">
                                                 <button class="btn-icon-vertical btn-transition btn btn-outline-warning"[routerLink]="['/editar-registro',item.id_registro]"><i class="pe-7s-pen btn-icon-wrapper"> </i>Editar</button>

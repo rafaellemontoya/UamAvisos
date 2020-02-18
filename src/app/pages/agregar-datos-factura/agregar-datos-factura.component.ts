@@ -11,5 +11,8 @@ export class AgregarDatosFacturaComponent implements OnInit {
 
   ngOnInit() {
   }
+  logout() {
+
+  }
 
 }
