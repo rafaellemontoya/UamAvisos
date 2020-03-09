@@ -14,9 +14,10 @@ const routes: Routes = [{path: '', component: LoginComponent },
 {path: 'ver-registro', component: VerRegistroComponent },
 {path: 'editar-registro/:id', component: EditarRegistroComponent },
 {path: 'ver-participante/:id', component: VerParticipanteComponent },
-{path: 'codigos-descuento', component: CodigosPromoComponent },
+{path: 'eventos', component: CodigosPromoComponent },
 {path: 'agregar-datos-factura', component: AgregarDatosFacturaComponent },
 {path: 'nueva-cortesia', component: NuevaCortesiaComponent },
+{path: 'registro-evento/:id', component: RegistroComponent },
 
 { path: '**', pathMatch: 'full', redirectTo: '' }];
 

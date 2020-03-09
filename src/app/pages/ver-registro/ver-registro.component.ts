@@ -35,8 +35,8 @@ export class VerRegistroComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
-    this.isLoggedIn();
-    // this.getInfo();
+    // this.isLoggedIn();
+    this.getInfo();
     }
 
   getInfo() {
